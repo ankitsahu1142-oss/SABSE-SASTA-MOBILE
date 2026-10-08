@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSM – Sabse Sasta Mobile | Quality Checked Phones</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#111827;--muted:#64748b;--brand:#2563eb;--brand2:#7c3aed;--line:#e5e7eb;--success:#16a34a;--danger:#dc2626}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.container{width:min(1180px,calc(100% - 28px));margin:auto}
+.topbar{background:#0f172a;color:#fff;font-size:13px}.topbar .container{padding:8px 0;display:flex;justify-content:space-between;gap:10px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{min-height:70px;display:flex;align-items:center;gap:18px}.logo{font-weight:900;font-size:23px;letter-spacing:-.7px;color:#111827;white-space:nowrap}.logo span{color:var(--brand)}
+.search{flex:1;position:relative}.search input{width:100%;padding:12px 15px 12px 42px;border:1px solid #dbe1ea;border-radius:14px;outline:none;background:#f8fafc}.search input:focus{border-color:var(--brand);box-shadow:0 0 0 3px #2563eb18}
+.search i{position:absolute;left:15px;top:14px;color:#94a3b8}.nav-actions{display:flex;gap:8px}.btn{border:0;border-radius:12px;padding:11px 15px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn-primary{background:var(--brand);color:#fff}.btn-dark{background:#111827;color:#fff}.btn-light{background:#eef2ff;color:#1e40af}.btn-danger{background:#fee2e2;color:#991b1b}.icon-btn{width:44px;height:44px;padding:0;border:1px solid var(--line);background:#fff;border-radius:12px;position:relative}.badge{position:absolute;right:-5px;top:-6px;background:#ef4444;color:#fff;border-radius:999px;font-size:11px;min-width:20px;height:20px;padding:2px 5px}
+.hero{margin:26px 0;padding:38px;border-radius:26px;background:linear-gradient(135deg,#0f172a,#1e3a8a 58%,#312e81);color:#fff;display:grid;grid-template-columns:1.5fr 1fr;gap:25px;align-items:center;overflow:hidden}.hero h1{font-size:clamp(32px,5vw,58px);line-height:1.02;margin:0 0 14px;letter-spacing:-2px}.hero p{color:#dbeafe;max-width:650px;font-size:17px}.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.tag{background:#ffffff16;border:1px solid #ffffff25;padding:8px 11px;border-radius:999px;font-size:13px}.hero-card{background:#ffffff12;border:1px solid #ffffff25;border-radius:20px;padding:22px}.hero-card strong{font-size:30px;display:block}.hero-card small{color:#bfdbfe}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:25px 0 15px}.section-head h2{margin:0;font-size:25px}.muted{color:var(--muted)}
+.filters{display:grid;grid-template-columns:1fr 180px 180px;gap:10px;margin-bottom:18px}.field{width:100%;padding:11px 13px;border:1px solid var(--line);background:#fff;border-radius:12px;outline:none}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 4px 18px #0f172a08;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #0f172a12}.pic{height:220px;background:#f1f5f9;position:relative}.pic img{width:100%;height:100%;object-fit:cover}.discount{position:absolute;left:10px;top:10px;background:#dc2626;color:#fff;padding:5px 8px;border-radius:8px;font-size:12px;font-weight:900}.stock{position:absolute;right:10px;top:10px;background:#dcfce7;color:#166534;padding:5px 8px;border-radius:8px;font-size:12px;font-weight:800}.card-body{padding:15px}.card h3{font-size:17px;margin:0 0 5px}.spec{font-size:13px;color:var(--muted);min-height:38px}.price{font-size:22px;font-weight:900;margin-top:10px}.mrp{text-decoration:line-through;color:#94a3b8;font-size:13px;margin-left:5px;font-weight:500}.card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}.card-actions .btn{padding:9px 8px;font-size:13px}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}.feature{background:#fff;border:1px solid var(--line);padding:18px;border-radius:16px}.feature b{display:block;margin-bottom:5px}.feature i{font-size:20px;color:var(--brand);margin-bottom:10px}
+.stats-banner{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin:25px 0}.stat-box{background:#fff;border:1px solid var(--line);padding:20px;border-radius:18px;text-align:center}.stat-box i{font-size:28px;color:var(--brand);margin-bottom:8px}.stat-box b{font-size:24px;display:block;color:#0f172a}
+.admin{margin:30px 0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}.admin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.admin-grid .full{grid-column:1/-1}.admin-list{margin-top:20px;display:grid;gap:9px}.admin-row{border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;justify-content:space-between;gap:10px;align-items:center}
+footer{margin-top:45px;background:#0f172a;color:#cbd5e1;padding:35px 0}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}.footer-grid h3{color:#fff}.footer-grid p{line-height:1.7}
+.overlay{position:fixed;inset:0;background:#020617aa;display:none;align-items:center;justify-content:center;padding:15px;z-index:100}.overlay.show{display:flex}.modal{width:min(620px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:20px;padding:20px}.modal h2{margin-top:0}.modal-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.close{border:0;background:#f1f5f9;width:38px;height:38px;border-radius:10px;font-size:20px}.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.modal-grid .full{grid-column:1/-1}.cart-item{display:flex;gap:12px;border:1px solid var(--line);padding:12px;border-radius:14px}.cart-item img{width:75px;height:75px;object-fit:cover;border-radius:10px}.total{display:flex;justify-content:space-between;font-size:19px;font-weight:900;border-top:1px solid var(--line);margin-top:15px;padding-top:15px}.empty{text-align:center;padding:45px 10px;background:#fff;border:1px dashed #cbd5e1;border-radius:18px}.toast{position:fixed;bottom:20px;right:20px;background:#111827;color:#fff;padding:13px 17px;border-radius:12px;z-index:200;display:none;box-shadow:0 10px 30px #0003}.toast.show{display:block}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.filters{grid-template-columns:1fr 1fr}.filters input{grid-column:1/-1}.stats-banner{grid-template-columns:1fr}}
+@media(max-width:600px){.topbar .container{justify-content:center}.topbar .container span:last-child{display:none}.nav{flex-wrap:wrap;padding:10px 0}.logo{font-size:20px}.search{order:3;flex-basis:100%}.nav-actions{margin-left:auto}.hero{padding:25px 20px;border-radius:20px}.hero h1{font-size:38px}.grid{grid-template-columns:1fr 1fr;gap:10px}.pic{height:175px}.card-body{padding:11px}.card h3{font-size:15px}.price{font-size:18px}.card-actions{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.admin-grid,.modal-grid{grid-template-columns:1fr}.modal-grid .full{grid-column:auto}.footer-grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.filters{grid-template-columns:1fr}.filters input{grid-column:auto}}
+</style>
+</head>
+
+<body>
+<div class="topbar">
+  <div class="container">
+    <span>✓ 100% Trusted App & Quality Checked Phones</span>
+    <span>COD Available • 7 Days Replacement* • Support: SSM</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <div class="logo">SSM <span>Mobile</span> <span style="font-size:12px;background:#dcfce7;color:#166534;padding:3px 7px;border-radius:6px;vertical-align:middle;"><i class="fa-solid fa-shield-check"></i> Trusted App</span></div>
+    <div class="search"><i class="fa-solid fa-magnifying-glass"></i><input id="searchInput" type="search" placeholder="Search iPhone, Samsung, OnePlus..." oninput="handleSearch(this.value)"></div>
+    <div class="nav-actions">
+      <button class="btn btn-light" onclick="openCustomerLogin()"><i class="fa-solid fa-user"></i> <span id="customerNavBtnText">Login</span></button>
+      <button class="icon-btn" aria-label="Cart" onclick="openCart()"><i class="fa-solid fa-cart-shopping"></i><span id="cartBadge" class="badge">0</span></button>
+      <button class="btn btn-dark" onclick="openAdminLogin()"><i class="fa-solid fa-user-shield"></i><span class="owner-text">Owner</span></button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <div class="tag" style="display:inline-block">⭐ SSM • 100% TRUSTED APP</div>
+      <h1>Achha phone.<br>Behtar price.</h1>
+      <p>Quality-checked second-hand smartphones ko simple, transparent aur affordable tareeke se choose karein.</p>
+      <div class="hero-tags"><span class="tag">✓ 20K+ Trusted Public</span><span class="tag">✓ 150+ Positive Reviews</span><span class="tag">✓ COD Available</span></div>
+      <button class="btn btn-primary" onclick="document.getElementById('products').scrollIntoView()">Phones Dekhein <i class="fa-solid fa-arrow-down"></i></button>
+    </div>
+    <div class="hero-card"><small>Starting from</small><strong>₹4,999</strong><p>Selected pre-owned smartphones. Final price and availability product-wise check karein.</p></div>
+  </section>
+
+  <!-- Trusted Stats Banner -->
+  <section class="stats-banner">
+    <div class="stat-box">
+      <i class="fa-solid fa-users"></i>
+      <b>20,000+</b>
+      <span class="muted">Trusted Happy Customers</span>
+    </div>
+    <div class="stat-box">
+      <i class="fa-solid fa-star" style="color:#eab308;"></i>
+      <b>150+ ⭐⭐⭐⭐⭐</b>
+      <span class="muted">Verified Positive Reviews</span>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="section-head"><div><h2>Available Phones</h2><div id="resultCount" class="muted"></div></div><button class="btn btn-light" onclick="resetFilters()">Reset Filters</button></div>
+    <div class="filters">
+      <input class="field" id="brandFilterSearch" type="text" placeholder="Filter by model / RAM / storage..." oninput="handleSearch(this.value)">
+      <select class="field" id="brandFilter" onchange="renderProducts()"><option value="all">All Brands</option><option>Apple</option><option>Samsung</option><option>OnePlus</option><option>Redmi</option><option>Realme</option><option>Vivo</option><option>Oppo</option><option>Other</option></select>
+      <select class="field" id="sortFilter" onchange="renderProducts()"><option value="newest">Newest</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option></select>
+    </div>
+    <div id="productGrid" class="grid"></div>
+  </section>
+
+  <section class="features">
+    <div class="feature"><i class="fa-solid fa-shield-halved"></i><b>Trusted App</b><span class="muted">Verified & safe buying experience.</span></div>
+    <div class="feature"><i class="fa-solid fa-tags"></i><b>Better Pricing</b><span class="muted">Compare price with listed MRP.</span></div>
+    <div class="feature"><i class="fa-solid fa-truck"></i><b>COD Option</b><span class="muted">Checkout flow included.</span></div>
+    <div class="feature"><i class="fa-solid fa-headset"></i><b>Easy Support</b><span class="muted">Order details ready for follow-up.</span></div>
+  </section>
+
+  <section id="adminPanel" class="admin" style="display:none">
+    <div class="section-head"><div><h2>Owner Dashboard</h2><div class="muted">Naye phones add karein aur direct photo upload karein.</div></div><button class="btn btn-danger" onclick="adminLogout()">Logout</button></div>
+    <form id="phoneForm" onsubmit="savePhone(event)">
+      <div class="admin-grid">
+        <input class="field" id="pBrand" required placeholder="Brand (e.g. Samsung)">
+        <input class="field" id="pModel" required placeholder="Model">
+        <input class="field" id="pPrice" required type="number" min="1" placeholder="Selling price">
+        <input class="field" id="pMrp" required type="number" min="1" placeholder="Original MRP">
+        <input class="field" id="pSpec" required placeholder="RAM / Storage e.g. 8GB / 128GB">
+        <select class="field" id="pCondition"><option>Excellent</option><option>Very Good</option><option>Good</option><option>Fair</option></select>
+        <input class="field" id="pBattery" required type="number" min="1" max="100" placeholder="Battery Health %">
+        <input class="field" id="pWarranty" required placeholder="Warranty">
+        
+        <div class="full">
+          <label style="font-size:13px; font-weight:700; color:var(--muted); display:block; margin-bottom:5px;">Upload Phone Image (Direct from device):</label>
+          <input class="field" id="pImageFile" type="file" accept="image/*">
+        </div>
+
+        <textarea class="field full" id="pDescription" rows="3" placeholder="Description"></textarea>
+        <div class="full" style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-primary" id="saveBtn">Add Phone</button><button type="button" class="btn btn-light" onclick="cancelEdit()">Cancel</button></div>
+      </div>
+    </form>
+    <div id="adminList" class="admin-list"></div>
+  </section>
+</main>
+
+<footer><div class="container footer-grid"><div><h3>SSM – Sabse Sasta Mobile</h3><p>Second-hand smartphones ke liye 100% trusted shopping app.</p></div><div><h3>Quick</h3><p>Products<br>Cart<br>Customer Login</p></div><div><h3>Important</h3><p>Final price, stock aur condition product listing par verify karein.</p></div></div></footer>
+
+<div id="detailOverlay" class="overlay" onclick="closeIfBackdrop(event,'detailOverlay')"><div class="modal"><div class="modal-head"><h2 id="detailTitle">Phone</h2><button class="close" onclick="closeModal('detailOverlay')">×</button></div><div id="detailBody"></div></div></div>
+
+<div id="cartOverlay" class="overlay" onclick="closeIfBackdrop(event,'cartOverlay')"><div class="modal"><div class="modal-head"><h2>Your Cart</h2><button class="close" onclick="closeModal('cartOverlay')">×</button></div><div id="cartBody"></div></div></div>
+
+<!-- Customer Login Modal -->
+<div id="customerLoginOverlay" class="overlay" onclick="closeIfBackdrop(event,'customerLoginOverlay')">
+  <div class="modal" style="max-width:380px">
+    <div class="modal-head"><h2>Customer Login</h2><button class="close" onclick="closeModal('customerLoginOverlay')">×</button></div>
+    <div id="customerLoginFormArea">
+      <p class="muted" style="margin-bottom:12px;">Apna mobile number dalein login karne ke liye.</p>
+      <input class="field" id="customerPhoneInput" inputmode="numeric" maxlength="10" placeholder="10-digit Mobile Number">
+      <button class="btn btn-primary" style="width:100%;margin-top:12px" onclick="loginCustomer()">Login / Register</button>
+    </div>
+    <div id="customerAccountArea" style="display:none; text-align:center; padding:10px 0;">
+      <i class="fa-solid fa-circle-check" style="font-size:40px; color:var(--success); margin-bottom:10px;"></i>
+      <h3>Welcome, <span id="loggedInCustomerName">User</span>!</h3>
+      <p class="muted">Aapka mobile: <span id="loggedInCustomerPhone"></span></p>
+      <button class="btn btn-danger" style="margin-top:15px; width:100%;" onclick="logoutCustomer()">Logout</button>
+    </div>
+  </div>
+</div>
+
+<div id="loginOverlay" class="overlay" onclick="closeIfBackdrop(event,'loginOverlay')">
+  <div class="modal" style="max-width:380px">
+    <div class="modal-head"><h2>Owner Login</h2><button class="close" onclick="closeModal('loginOverlay')">×</button></div>
+    <p class="muted" style="margin-bottom:12px;">Access ke liye password enter karein.</p>
+    <input class="field" id="adminPassword" type="password" placeholder="Enter Password">
+    <button class="btn btn-primary" style="width:100%;margin-top:12px" onclick="loginAdmin()">Login</button>
+  </div>
+</div>
+
+<div id="checkoutOverlay" class="overlay"><div class="modal"><div class="modal-head"><h2>Checkout - Delivery Details</h2><button class="close" onclick="closeModal('checkoutOverlay')">×</button></div>
+<form onsubmit="placeOrder(event)"><div class="modal-grid">
+<input class="field" id="cName" required placeholder="Full Name">
+<input class="field" id="cPhone" required inputmode="numeric" maxlength="10" placeholder="10-digit Mobile Number">
+<input class="field full" id="cAddress" required placeholder="Complete Address (House No, Street, Landmark)">
+<input class="field" id="cCity" required placeholder="City">
+<input class="field" id="cPin" required inputmode="numeric" maxlength="6" placeholder="6-digit PIN Code">
+</div><div class="total"><span>Total</span><span id="checkoutTotal">₹0</span></div><button class="btn btn-primary" style="width:100%;margin-top:15px" type="submit">Confirm & Send Order on WhatsApp</button></form>
+</div></div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+// Apna WhatsApp number yahan daalein (Country code ke saath, jaise 919876543210)
+const OWNER_WHATSAPP_NUMBER = "9294963991"; 
+
+const DEFAULT_PHONES = [
+  {id:1,brand:"Apple",model:"iPhone 11",price:29999,originalPrice:49900,ramStorage:"4GB / 64GB",condition:"Excellent",battery:87,warranty:"7 Days",image:"https://images.unsplash.com/photo-1592286927505-2fd7f0f1a1d2?auto=format&fit=crop&w=900&q=80",description:"Clean condition iPhone with quality-check details."},
+  {id:2,brand:"OnePlus",model:"Nord CE 2 5G",price:14999,originalPrice:24999,ramStorage:"8GB / 128GB",condition:"Very Good",battery:91,warranty:"7 Days",image:"https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=900&q=80",description:"5G phone with good battery and storage."},
+  {id:3,brand:"Samsung",model:"Galaxy M32",price:9999,originalPrice:16999,ramStorage:"6GB / 128GB",condition:"Good",battery:85,warranty:"7 Days",image:"https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=900&q=80",description:"Affordable Samsung smartphone."},
+  {id:4,brand:"Redmi",model:"Note 10 Pro",price:11999,originalPrice:18999,ramStorage:"6GB / 128GB",condition:"Very Good",battery:89,warranty:"7 Days",image:"https://images.unsplash.com/photo-1598327106026-d9521da673d1?auto=format&fit=crop&w=900&q=80",description:"Popular Redmi model with balanced specs."}
+];
+
+let phones = JSON.parse(localStorage.getItem("ssm_phones") || "null") || DEFAULT_PHONES;
+let cart = JSON.parse(localStorage.getItem("ssm_cart") || "[]");
+let orders = JSON.parse(localStorage.getItem("ssm_orders") || "[]");
+let isAdmin = sessionStorage.getItem("ssm_admin") === "1";
+let customerUser = JSON.parse(localStorage.getItem("ssm_customer") || "null");
+let editingId = null;
+let searchQuery = "";
+
+const $ = id => document.getElementById(id);
+function money(n){return "₹"+Number(n).toLocaleString("en-IN")}
+function esc(v){return String(v ?? "").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]))}
+function saveData(){localStorage.setItem("ssm_phones",JSON.stringify(phones));localStorage.setItem("ssm_cart",JSON.stringify(cart));localStorage.setItem("ssm_orders",JSON.stringify(orders))}
+function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),2600)}
+function handleSearch(v){searchQuery=v.toLowerCase().trim();$("brandFilterSearch").value=v;renderProducts()}
+function resetFilters(){$("searchInput").value="";$("brandFilterSearch").value="";$("brandFilter").value="all";$("sortFilter").value="newest";searchQuery="";renderProducts()}
+
+function renderProducts(){
+  const brand=$("brandFilter").value;
+  let list=phones.filter(p=>{
+    const hay=[p.model,p.brand,p.ramStorage,p.condition,p.warranty,p.description].join(" ").toLowerCase();
+    return (!searchQuery||hay.includes(searchQuery))&&(brand==="all"||p.brand===brand)
+  });
+  if($("sortFilter").value==="low") list.sort((a,b)=>a.price-b.price);
+  if($("sortFilter").value==="high") list.sort((a,b)=>b.price-a.price);
+  $("resultCount").textContent=list.length+" phone"+(list.length===1?"":"s")+" available";
+  if(!list.length){$("productGrid").innerHTML='<div class="empty" style="grid-column:1/-1"><h3>No phone found</h3><p class="muted">Search/filter change karke try karein.</p></div>';return}
+  $("productGrid").innerHTML=list.map(p=>{
+    const off=Math.max(0,Math.round((1-p.price/p.originalPrice)*100));
+    return `<article class="card">
+      <div class="pic"><img src="${esc(p.image||'https://placehold.co/900x700?text=SSM+Mobile')}" alt="${esc(p.model)}" loading="lazy" onerror="this.src='https://placehold.co/900x700?text=SSM+Mobile'">
+      ${off?`<span class="discount">${off}% OFF</span>`:""}<span class="stock">Available</span></div>
+      <div class="card-body"><h3>${esc(p.brand)} ${esc(p.model)}</h3><div class="spec">${esc(p.ramStorage)} • ${esc(p.condition)} • Battery ${esc(p.battery)}%</div>
+      <div class="price">${money(p.price)} <span class="mrp">${money(p.originalPrice)}</span></div>
+      <div class="card-actions"><button class="btn btn-light" onclick="viewDetails(${p.id})">Details</button><button class="btn btn-primary" onclick="addToCart(${p.id})">Add to Cart</button></div></div>
+    </article>`
+  }).join("");
+  updateCartBadge();
+  updateCustomerNav();
+}
+
+function viewDetails(id){
+  const p=phones.find(x=>x.id===id);if(!p)return;
+  $("detailTitle").textContent=p.brand+" "+p.model;
+  $("detailBody").innerHTML=`<img src="${esc(p.image)}" alt="${esc(p.model)}" style="width:100%;height:270px;object-fit:cover;border-radius:15px" onerror="this.src='https://placehold.co/900x700?text=SSM+Mobile'">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0"><div><b>Price</b><br>${money(p.price)}</div><div><b>MRP</b><br>${money(p.originalPrice)}</div><div><b>RAM/Storage</b><br>${esc(p.ramStorage)}</div><div><b>Condition</b><br>${esc(p.condition)}</div><div><b>Battery</b><br>${esc(p.battery)}%</div><div><b>Warranty</b><br>${esc(p.warranty)}</div></div><p class="muted">${esc(p.description)}</p><button class="btn btn-primary" style="width:100%" onclick="addToCart(${p.id});closeModal('detailOverlay')">Add to Cart • ${money(p.price)}</button>`;
+  openModal("detailOverlay")
+}
+
+function addToCart(id){const p=phones.find(x=>x.id===id);if(!p)return;if(!cart.some(x=>x.id===id))cart.push({id:p.id,qty:1});saveData();updateCartBadge();toast("Cart mein add ho gaya")}
+function updateCartBadge(){$("cartBadge").textContent=cart.reduce((s,x)=>s+x.qty,0)}
+
+// Customer Login Functions
+function openCustomerLogin(){
+  if(customerUser){
+    $("customerLoginFormArea").style.display = "none";
+    $("customerAccountArea").style.display = "block";
+    $("loggedInCustomerName").textContent = customerUser.name;
+    $("loggedInCustomerPhone").textContent = customerUser.phone;
+  } else {
+    $("customerLoginFormArea").style.display = "block";
+    $("customerAccountArea").style.display = "none";
+    $("customerPhoneInput").value = "";
+  }
+  openModal("customerLoginOverlay");
+}
+
+function loginCustomer(){
+  const phone = $("customerPhoneInput").value.replace(/\D/g,"");
+  if(!/^[6-9]\d{9}$/.test(phone)){
+    toast("Valid 10-digit mobile number dalein");
+    return;
+  }
+  customerUser = {name: "Customer " + phone.slice(-4), phone: phone};
+  localStorage.setItem("ssm_customer", JSON.stringify(customerUser));
+  closeModal("customerLoginOverlay");
+  updateCustomerNav();
+  toast("Login successful!");
+}
+
+function logoutCustomer(){
+  customerUser = null;
+  localStorage.removeItem("ssm_customer");
+  closeModal("customerLoginOverlay");
+  updateCustomerNav();
+  toast("Logged out successfully");
+}
+
+function updateCustomerNav(){
+  if(customerUser){
+    $("customerNavBtnText").textContent = customerUser.phone.slice(-4);
+  } else {
+    $("customerNavBtnText").textContent = "Login";
+  }
+}
+
+function openCart(){
+  const items=cart.map(x=>({x,p:phones.find(p=>p.id===x.id)})).filter(a=>a.p);
+  if(!items.length){$("cartBody").innerHTML='<div class="empty"><h3>Cart empty hai</h3><p class="muted">Kisi phone ko Add to Cart karein.</p></div>'}
+  else{
+    const total=items.reduce((s,a)=>s+a.p.price*a.x.qty,0);
+    $("cartBody").innerHTML=items.map(a=>`<div class="cart-item"><img src="${esc(a.p.image)}" alt=""><div style="flex:1"><b>${esc(a.p.brand)} ${esc(a.p.model)}</b><div class="muted">${money(a.p.price)} × ${a.x.qty}</div><button class="btn btn-danger" style="margin-top:7px;padding:6px 9px" onclick="removeCart(${a.p.id})">Remove</button></div></div>`).join("")+
+    `<div class="total"><span>Total</span><span>${money(total)}</span></div><button class="btn btn-primary" style="width:100%;margin-top:15px" onclick="openCheckout()">Continue to Checkout</button>`;
+  }
+  openModal("cartOverlay")
+}
+
+function removeCart(id){cart=cart.filter(x=>x.id!==id);saveData();updateCartBadge();openCart()}
+function openCheckout(){
+  if(!cart.length){toast("Cart empty hai");return}
+  closeModal("cartOverlay");
+  const total=cart.reduce((s,x)=>{const p=phones.find(p=>p.id===x.id);return s+(p?p.price*x.qty:0)},0);
+  $("checkoutTotal").textContent=money(total);
+  if(customerUser){
+    $("cPhone").value = customerUser.phone;
+    $("cName").value = customerUser.name;
+  }
+  openModal("checkoutOverlay");
+}
+
+function placeOrder(e){
+  e.preventDefault();
+  const phone=$("cPhone").value.replace(/\D/g,""),pin=$("cPin").value.replace(/\D/g,"");
+  if(!/^[6-9]\d{9}$/.test(phone)){toast("Valid 10-digit mobile number dalein");return}
+  if(!/^\d{6}$/.test(pin)){toast("Valid 6-digit PIN code dalein");return}
+  
+  const orderId="SSM-"+Date.now().toString().slice(-8);
+  const name = $("cName").value.trim();
+  const address = $("cAddress").value.trim();
+  const city = $("cCity").value.trim();
+  
+  let orderedItemsText = "";
+  let total = 0;
+  cart.forEach(x=>{
+    const p = phones.find(p=>p.id===x.id);
+    if(p){
+      orderedItemsText += `- ${p.brand} ${p.model} (${money(p.price)})\n`;
+      total += p.price * x.qty;
+    }
+  });
+
+  orders.push({orderId, name, phone, address, city, pin, total, status:"New", createdAt:new Date().toISOString()});
+  
+  let waMessage = `🛍️ *New Order Received!* (ID: ${orderId})\n\n`;
+  waMessage += `👤 *Customer Name:* ${name}\n`;
+  waMessage += `📱 *Mobile Number:* ${phone}\n`;
+  waMessage += `🏠 *Delivery Address:* ${address}, City: ${city} - PIN: ${pin}\n\n`;
+  waMessage += `📦 *Ordered Phones:*\n${orderedItemsText}\n`;
+  waMessage += `💰 *Total Amount:* ${money(total)} (COD)`;
+
+  cart=[]; saveData(); e.target.reset(); closeModal("checkoutOverlay"); updateCartBadge(); toast("Order placed successfully!");
+  
+  const encodedMsg = encodeURIComponent(waMessage);
+  window.open(`https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encodedMsg}`, '_blank');
+}
+
+function openAdminLogin(){
+  if(isAdmin){showAdmin();return}
+  $("adminPassword").value = "";
+  openModal("loginOverlay");
+}
+
+function loginAdmin(){
+  const password = $("adminPassword").value;
+  if(password === "Avivek@42"){
+    isAdmin = true;
+    sessionStorage.setItem("ssm_admin", "1");
+    closeModal("loginOverlay");
+    showAdmin();
+    toast("Owner mode active");
+  } else {
+    toast("Wrong Password!");
+  }
+}
+
+function showAdmin(){$("adminPanel").style.display="block";renderAdmin();$("adminPanel").scrollIntoView({behavior:"smooth"})}
+function adminLogout(){isAdmin=false;sessionStorage.removeItem("ssm_admin");$("adminPanel").style.display="none";toast("Logged out")}
+
+function savePhone(e){
+  e.preventDefault(); if(!isAdmin)return;
+  const price=Number($("pPrice").value), mrp=Number($("pMrp").value), battery=Number($("pBattery").value);
+  if(price<=0 || mrp<=0 || price>mrp){toast("Price aur MRP sahi bharein");return}
+
+  const fileInput = $("pImageFile");
+  let imageResult = "https://placehold.co/900x700?text=SSM+Mobile";
+
+  if(fileInput.files && fileInput.files[0]){
+    const reader = new FileReader();
+    reader.onload = function(uploadEvent){
+      imageResult = uploadEvent.target.result;
+      finishSavingPhone(price, mrp, battery, imageResult);
+    };
+    reader.readAsDataURL(fileInput.files[0]);
+  } else {
+    if(editingId){
+      const existing = phones.find(p=>p.id===editingId);
+      if(existing) imageResult = existing.image;
+    }
+    finishSavingPhone(price, mrp, battery, imageResult);
+  }
+}
+
+function finishSavingPhone(price, mrp, battery, imageResult){
+  const data={
+    brand:$("pBrand").value.trim(),
+    model:$("pModel").value.trim(),
+    price,
+    originalPrice:mrp,
+    ramStorage:$("pSpec").value.trim(),
+    condition:$("pCondition").value,
+    battery,
+    warranty:$("pWarranty").value.trim(),
+    image: imageResult,
+    description:$("pDescription").value.trim()
+  };
+
+  if(editingId){
+    const idx=phones.findIndex(p=>p.id===editingId);
+    if(idx>=0) phones[idx]={...phones[idx],...data};
+    toast("Product updated successfully!");
+  } else {
+    phones.unshift({id:Date.now(),...data});
+    toast("New phone added successfully!");
+  }
+  saveData(); cancelEdit(); renderProducts(); renderAdmin();
+}
+
+function editPhone(id){
+  const p=phones.find(x=>x.id===id); if(!p)return;
+  editingId=id;
+  for(const [k,v] of Object.entries({pBrand:p.brand, pModel:p.model, pPrice:p.price, pMrp:p.originalPrice, pSpec:p.ramStorage, pCondition:p.condition, pBattery:p.battery, pWarranty:p.warranty, pDescription:p.description})) $(k).value=v;
+  $("saveBtn").textContent="Update Phone";
+  $("adminPanel").scrollIntoView({behavior:"smooth"});
+}
+
+function cancelEdit(){editingId=null;$("phoneForm").reset();$("saveBtn").textContent="Add Phone"}
+function deletePhone(id){if(!isAdmin)return;if(confirm("Kya aap is product ko delete karna chahte hain?")){phones=phones.filter(p=>p.id!==id);cart=cart.filter(x=>x.id!==id);saveData();renderProducts();renderAdmin();toast("Product deleted")}}
+function renderAdmin(){$("adminList").innerHTML=phones.map(p=>`<div class="admin-row"><div style="display:flex;align-items:center;gap:10px;"><img src="${esc(p.image)}" style="width:45px;height:45px;object-fit:cover;border-radius:8px;"><div><b>${esc(p.brand)} ${esc(p.model)}</b><div class="muted">${money(p.price)} • ${esc(p.condition)}</div></div></div><div style="display:flex;gap:6px"><button class="btn btn-light" onclick="editPhone(${p.id})">Edit</button><button class="btn btn-danger" onclick="deletePhone(${p.id})">Delete</button></div></div>`).join("")}
+
+function openModal(id){$(id).classList.add("show")}
+function closeModal(id){$(id).classList.remove("show")}
+function closeIfBackdrop(e,id){if(e.target.id===id)closeModal(id)}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".overlay.show").forEach(x=>x.classList.remove("show"))})
+window.addEventListener("load",()=>{renderProducts();updateCartBadge();if(isAdmin)showAdmin()})
+</script>
+</body>
+</html>
